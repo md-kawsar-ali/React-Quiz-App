@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DataContext from '../context/dataContext';
 
-const Result = ({ showResult, quizs, marks, startOver }) => {
+const Result = () => {
+    const { showResult, quizs, marks, startOver }  = useContext(DataContext);
     return (
         <section className="bg-dark text-white" style={{ display: `${showResult ? 'block' : 'none'}` }}>
             <div className="container">

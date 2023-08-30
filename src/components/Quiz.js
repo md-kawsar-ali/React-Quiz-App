@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DataContext from '../context/dataContext';
 
-const Quiz = ({ showQuiz, question, quizs, checkAnswer, correctAnswer, selectedAnswer, questionIndex, nextQuestion, showTheResult }) => {
+const Quiz = () => {
+    const { showQuiz, question, quizs, checkAnswer, correctAnswer,
+            selectedAnswer,questionIndex, nextQuestion, showTheResult }  = useContext(DataContext);
 
     return (
         <section className="bg-dark text-white" style={{ display: `${showQuiz ? 'block' : 'none'}` }}>
